@@ -7,7 +7,7 @@ const NATURAL_EVENT_WILDFIRE = 8;
 const Map = ({ eventData, center, zoom }) => {
 
         const markers = eventData.map(ev => {
-            if(ev.categories[0] === NATURAL_EVENT_WILDFIRE) {
+            if(ev.categories[0].id === NATURAL_EVENT_WILDFIRE) {
                 return <LocationMarker lat={ev.geometries[0].coordinates[1]} lng={ev.geometries[0].coordinates[0]} />
             }
             return null
@@ -16,7 +16,7 @@ const Map = ({ eventData, center, zoom }) => {
     return (
         <div className="map">
             <GoogleMapReact 
-                bootstrapURLKeys={{ key: 'AIzaSyCdOvZRSqV3yNi_hV6k5O8AnJJXSsRzJW0'}}
+                bootstrapURLKeys={{ key: 'AIzaSyBCNxFZf-Uu3g_fwBf47aKDt-l-riWTh1I'}}
                 defaultCenter={ center }
                 defaultZoom={ zoom }
             >
